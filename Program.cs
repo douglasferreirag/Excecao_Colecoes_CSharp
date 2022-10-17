@@ -1,47 +1,49 @@
 ﻿
 
-using System.IO;
+using Excecoes_Colecoes.Models;
 
+new ExemploExcecao().Metodo1();
 
-//string[] linhasExemplo = File.ReadAllLines("Arquivos/arquivo_Leitura.txt");
-//Console.WriteLine("Chegou até aqui");
 
-try{
+// // using System.IO;
 
 
+// // //string[] linhasExemplo = File.ReadAllLines("Arquivos/arquivo_Leitura.txt");
+// // //Console.WriteLine("Chegou até aqui");
 
-                string[] linhas = File.ReadAllLines("Arquivos/darquivoLeitura.txt");
-                foreach (string linha in linhas){
+// // try{
 
-                    Console.WriteLine(linha);
 
-                }
 
-}catch(FileNotFoundException ex){
+// //                 string[] linhas = File.ReadAllLines("Arquivos/darquivoLeitura.txt");
+// //                 foreach (string linha in linhas){
 
-    Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado.  {ex.Message}");
+// //                     Console.WriteLine(linha);
 
+// //                 }
 
-}catch(DirectoryNotFoundException ex){
+// // }catch(FileNotFoundException ex){
 
-      Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho da pasta  não encontrado.  {ex.Message}");
+// //     Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado.  {ex.Message}");
 
 
+// // }catch(DirectoryNotFoundException ex){
 
-}catch(Exception ex){
+// //       Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho da pasta  não encontrado.  {ex.Message}");
 
-      Console.WriteLine($"Ocorreu uma exceção genérica.  {ex.Message}");
 
 
-}finally{
+// // }catch(Exception ex){
 
-        Console.WriteLine("Chegou até aqui");
+// //       Console.WriteLine($"Ocorreu uma exceção genérica.  {ex.Message}");
 
 
-}
+// // }finally{
 
+// //         Console.WriteLine("Chegou até aqui");
 
 
+// // }
 
 
 
@@ -65,65 +67,65 @@ try{
 
 
 
-// using ExemploFundamentos.Models;
-//using OperadoresAritmeticosCSharp.Models;
 
 
 
-// Calculadora  calc = new Calculadora();
+// // // using ExemploFundamentos.Models;
+// // //using OperadoresAritmeticosCSharp.Models;
 
 
-// calc.Somar(10,30);
-// calc.Subtrair(10,50);
-// calc.Multiplicar(15,45);
-// calc.Dividir(2,2);
-//calc.Potencia(3,3);
-// calc.Seno(30);
-// calc.Cosseno(30);
-// calc.Tangente(30);
 
-// int numeroIncremento = 10;
-// Console.WriteLine(numeroIncremento);
-// Console.WriteLine("Incrementando o 10");
-// // numero = numero + 1;
-// numeroIncremento++;
-// Console.WriteLine(numeroIncremento);
+// // // Calculadora  calc = new Calculadora();
 
-// int numeroDecremento = 20;
-// Console.WriteLine("Decrementando o 20");
-// // numero = numero + 1;
-// numeroDecremento--;
-// Console.WriteLine(numeroDecremento);
 
-//calc.RaizQuadrada(9);
+// // // calc.Somar(10,30);
+// // // calc.Subtrair(10,50);
+// // // calc.Multiplicar(15,45);
+// // // calc.Dividir(2,2);
+// // //calc.Potencia(3,3);
+// // // calc.Seno(30);
+// // // calc.Cosseno(30);
+// // // calc.Tangente(30);
 
+// // // int numeroIncremento = 10;
+// // // Console.WriteLine(numeroIncremento);
+// // // Console.WriteLine("Incrementando o 10");
+// // // // numero = numero + 1;
+// // // numeroIncremento++;
+// // // Console.WriteLine(numeroIncremento);
 
+// // // int numeroDecremento = 20;
+// // // Console.WriteLine("Decrementando o 20");
+// // // // numero = numero + 1;
+// // // numeroDecremento--;
+// // // Console.WriteLine(numeroDecremento);
 
-// using HerancaPolimorfismo.Models;
+// // //calc.RaizQuadrada(9);
 
-// Aluno aluno = new Aluno();
 
-// aluno.Nome = "Leonardo";
 
-// aluno.Email = "testou.com";
+// // // using HerancaPolimorfismo.Models;
 
-// aluno.Idade = 20;
+// // // Aluno aluno = new Aluno();
 
-// aluno.Nota = 10;
+// // // aluno.Nome = "Leonardo";
 
-// aluno.Apresentar();
+// // // aluno.Email = "testou.com";
 
+// // // aluno.Idade = 20;
 
+// // // aluno.Nota = 10;
 
-// Professor p1 = new Professor();
+// // // aluno.Apresentar();
 
-// p1.Nome ="Eduardo";
-// p1.Idade = 50;
-// p1.Salario = 1000;
-// p1.Apresentar();
 
 
+// // // Professor p1 = new Professor();
 
+// // // p1.Nome ="Eduardo";
+// // // p1.Idade = 50;
+// // // p1.Salario = 1000;
+// // // p1.Apresentar();
 
 
 
@@ -134,22 +136,22 @@ try{
 
 
 
-// bool choveu = false;
-// bool estaTarde = true;
 
-// if(!choveu && ! estaTarde){
 
-//       Console.WriteLine("Vou pedalar");
 
-// }
-// else{
+// // // bool choveu = false;
+// // // bool estaTarde = true;
 
-//       Console.WriteLine("Vou  pedalar um outro dia.");
+// // // if(!choveu && ! estaTarde){
 
-// }
+// // //       Console.WriteLine("Vou pedalar");
 
+// // // }
+// // // else{
 
+// // //       Console.WriteLine("Vou  pedalar um outro dia.");
 
+// // // }
 
 
 
@@ -157,23 +159,23 @@ try{
 
 
 
-// bool possuiPresencaMinima = true;
 
-// double media =5.5;
 
-// if(possuiPresencaMinima && media >= 7){
 
-//       Console.WriteLine("Aprovado");
+// // // bool possuiPresencaMinima = true;
 
+// // // double media =5.5;
 
-// }else{
+// // // if(possuiPresencaMinima && media >= 7){
 
-//       Console.WriteLine("Reprovado");
+// // //       Console.WriteLine("Aprovado");
 
-// }
 
+// // // }else{
 
+// // //       Console.WriteLine("Reprovado");
 
+// // // }
 
 
 
@@ -186,22 +188,22 @@ try{
 
 
 
-// bool ehMaiorDeIdade = false;
-// bool possuiAutorizacaoDoUsuario = false;
 
-// if(ehMaiorDeIdade || possuiAutorizacaoDoUsuario){
 
-//       Console.WriteLine("Entrada liberada");
 
-// }
-// else{
+// // // bool ehMaiorDeIdade = false;
+// // // bool possuiAutorizacaoDoUsuario = false;
 
-//       Console.WriteLine("Entrada não liberada");
+// // // if(ehMaiorDeIdade || possuiAutorizacaoDoUsuario){
 
-// }
+// // //       Console.WriteLine("Entrada liberada");
 
+// // // }
+// // // else{
 
+// // //       Console.WriteLine("Entrada não liberada");
 
+// // // }
 
 
 
@@ -210,27 +212,27 @@ try{
 
 
 
-// Console.WriteLine("Digite uma letra:  ");
-// string letra = Console.ReadLine();
 
-// switch (letra)
-// {
-//       case "a":
-//       case "e":
-//       case "i":
-//       case "o":
-//       case "u":
-//             Console.WriteLine("Vogal");
-//             break;
 
-//       default:
-//             Console.WriteLine("Não é uma vogal");
-//             break;
 
-// }
+// // // Console.WriteLine("Digite uma letra:  ");
+// // // string letra = Console.ReadLine();
 
+// // // switch (letra)
+// // // {
+// // //       case "a":
+// // //       case "e":
+// // //       case "i":
+// // //       case "o":
+// // //       case "u":
+// // //             Console.WriteLine("Vogal");
+// // //             break;
 
+// // //       default:
+// // //             Console.WriteLine("Não é uma vogal");
+// // //             break;
 
+// // // }
 
 
 
@@ -246,21 +248,21 @@ try{
 
 
 
-// if(letra == "a" || letra == "e"
-//    letra == "i" || letra == "o" 
-//    || letra == "u") {
 
-//       Console.WriteLine("Vogal");
 
-// }
-// else{
 
-//       Console.WriteLine("Não é uma vogal");
+// // // if(letra == "a" || letra == "e"
+// // //    letra == "i" || letra == "o" 
+// // //    || letra == "u") {
 
-// }
+// // //       Console.WriteLine("Vogal");
 
+// // // }
+// // // else{
 
+// // //       Console.WriteLine("Não é uma vogal");
 
+// // // }
 
 
 
@@ -279,34 +281,34 @@ try{
 
 
 
-// if(letra == "a"){
 
-//        Console.Writeline("vogal");
 
-// }else if(letra == "e"){
 
-//        Console.Writeline("vogal");
+// // // if(letra == "a"){
 
-// }else if(letra == "i"){
+// // //        Console.Writeline("vogal");
 
-//        Console.Writeline("vogal");
+// // // }else if(letra == "e"){
 
-// }else if(letra == "o){
+// // //        Console.Writeline("vogal");
 
-//        Console.Writeline("vogal");
+// // // }else if(letra == "i"){
 
-// } else if(letra == "u"){
+// // //        Console.Writeline("vogal");
 
-//       Console.Writeline("vogal");
+// // // }else if(letra == "o){
 
-// }else{
+// // //        Console.Writeline("vogal");
 
-//       Console.Writeline("Não é umavogal");
+// // // } else if(letra == "u"){
 
-// }
+// // //       Console.Writeline("vogal");
 
+// // // }else{
 
+// // //       Console.Writeline("Não é umavogal");
 
+// // // }
 
 
 
@@ -316,104 +318,104 @@ try{
 
 
 
-// int quantidadeEmEstoque = 3;
 
-// int quantidadeCompra = 0;
 
-// bool possivelVenda = quantidadeCompra > 0  && quantidadeEmEstoque >= quantidadeCompra;
 
-// Console.WriteLine($"Quantidade em estoque:  {quantidadeEmEstoque} ");
-// Console.WriteLine($"Quantidade compra:  {quantidadeCompra} ");
-// Console.WriteLine($"É possível realizar a venda?  {possivelVenda}");
+// // // int quantidadeEmEstoque = 3;
 
+// // // int quantidadeCompra = 0;
 
-// if(quantidadeCompra == 0){
+// // // bool possivelVenda = quantidadeCompra > 0  && quantidadeEmEstoque >= quantidadeCompra;
 
-//       Console.WriteLine("Venda inválida");
+// // // Console.WriteLine($"Quantidade em estoque:  {quantidadeEmEstoque} ");
+// // // Console.WriteLine($"Quantidade compra:  {quantidadeCompra} ");
+// // // Console.WriteLine($"É possível realizar a venda?  {possivelVenda}");
 
-// }
-// else if(possivelVenda)
-// {
 
-//       Console.WriteLine("Venda realizada.");
+// // // if(quantidadeCompra == 0){
 
+// // //       Console.WriteLine("Venda inválida");
 
-// }
-// else
-// {
+// // // }
+// // // else if(possivelVenda)
+// // // {
 
-//       Console.WriteLine("Desculpe não temos a quantidade desejada em estoque");
+// // //       Console.WriteLine("Venda realizada.");
 
-// }
 
+// // // }
+// // // else
+// // // {
 
+// // //       Console.WriteLine("Desculpe não temos a quantidade desejada em estoque");
 
+// // // }
 
 
 
 
 
-// string a = "15-";
 
-// //int b =0;
 
-// int.TryParse(a, out int b);
 
-// Console.WriteLine(b);
+// // // string a = "15-";
 
-// Console.WriteLine("Conversão realizada com sucesso");
+// // // //int b =0;
 
+// // // int.TryParse(a, out int b);
 
-// double a = 4/ (2 + 2);
+// // // Console.WriteLine(b);
 
-// Console.WriteLine(a);
+// // // Console.WriteLine("Conversão realizada com sucesso");
 
 
-// int a = 5;
+// // // double a = 4/ (2 + 2);
 
-// double b = a;
+// // // Console.WriteLine(a);
 
-// long a = long.MaxValue;
 
-// long b = Convert.ToInt32(a);
+// // // int a = 5;
 
-// int a = int.MaxValue;
+// // // double b = a;
 
-// long b = a;
+// // // long a = long.MaxValue;
 
-// Console.WriteLine(b);
+// // // long b = Convert.ToInt32(a);
 
+// // // int a = int.MaxValue;
 
-// int a =  10;
+// // // long b = a;
 
-// int  b = 20;
+// // // Console.WriteLine(b);
 
-// int c = a + b;
 
-//c = c +  5; // 30 + 5
+// // // int a =  10;
 
-//c += 5;  // c = c + 5
+// // // int  b = 20;
 
-//c -= 5; // c = c -- 5
+// // // int c = a + b;
 
-//c *= 5;
+// // //c = c +  5; // 30 + 5
 
+// // //c += 5;  // c = c + 5
 
+// // //c -= 5; // c = c -- 5
 
-//Console.WriteLine(c);
+// // //c *= 5;
 
-//Cast  -  Casting
-//int a = Convert.ToInt32(null); // Retorna 0 ao passar o valor nulo como parâmetro. Preferíel de utilizar. Cenário  de valor nulo é comum.
 
-//int a = int.Parse(null); // Não aceita nulo
 
-// int inteiro = 5;
-// string a =   inteiro.ToString();
+// // //Console.WriteLine(c);
 
-// Console.WriteLine(a);
+// // //Cast  -  Casting
+// // //int a = Convert.ToInt32(null); // Retorna 0 ao passar o valor nulo como parâmetro. Preferíel de utilizar. Cenário  de valor nulo é comum.
 
+// // //int a = int.Parse(null); // Não aceita nulo
 
+// // // int inteiro = 5;
+// // // string a =   inteiro.ToString();
 
+// // // Console.WriteLine(a);
 
 
 
@@ -432,12 +434,12 @@ try{
 
 
 
-// DateTime dataAtual = DateTime.Now.AddDays(5);
 
-// Console.WriteLine(dataAtual.ToString("dd/MM/yyyy HH:mm"));
 
 
+// // // DateTime dataAtual = DateTime.Now.AddDays(5);
 
+// // // Console.WriteLine(dataAtual.ToString("dd/MM/yyyy HH:mm"));
 
 
 
@@ -453,41 +455,43 @@ try{
 
 
 
-// string apresentacao = "Olá, seja bem vindo";
 
-// int quantidade = 1;
 
-// Console.WriteLine("Valor da variável quantidade: " + quantidade);
 
-// quantidade = 10;
+// // // string apresentacao = "Olá, seja bem vindo";
 
-// Console.WriteLine("Valor da variável quantidade: " + quantidade);
+// // // int quantidade = 1;
 
-// double altura = 1.80;
+// // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
 
-// decimal preco =1.80M;
+// // // quantidade = 10;
 
-// bool condicao = true;
+// // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
 
-// Console.WriteLine("Valor da variável apresentacao: " + apresentacao);
+// // // double altura = 1.80;
 
-// Console.WriteLine("Valor da variável quantidade: " + quantidade);
+// // // decimal preco =1.80M;
 
-// Console.WriteLine("Valor da variável altura: " + altura.ToString("0.00"));
+// // // bool condicao = true;
 
-// Console.WriteLine("Valor da variável preco: " + preco);
+// // // Console.WriteLine("Valor da variável apresentacao: " + apresentacao);
 
-// Console.WriteLine("Valor da variável condicao: " + condicao);
+// // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
 
+// // // Console.WriteLine("Valor da variável altura: " + altura.ToString("0.00"));
 
+// // // Console.WriteLine("Valor da variável preco: " + preco);
 
-/*Pessoa pessoa1 = new Pessoa();
-pessoa1.Nome = "Buta";
-pessoa1.Idade = 26;
-pessoa1.Apresentar();
+// // // Console.WriteLine("Valor da variável condicao: " + condicao);
 
-Pessoa pessoaFisicaRepresentacao = new Pessoa();*/
 
+
+// // /*Pessoa pessoa1 = new Pessoa();
+// // pessoa1.Nome = "Buta";
+// // pessoa1.Idade = 26;
+// // pessoa1.Apresentar();
+
+// // Pessoa pessoaFisicaRepresentacao = new Pessoa();*/
 
 
 
