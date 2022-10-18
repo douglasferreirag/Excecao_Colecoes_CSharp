@@ -3,25 +3,58 @@
 estados.Add("SP", "São Paulo");
 estados.Add("BA", "Bahia");
 estados.Add("MG", "Minas Gerais");
-estados.Add("BA2", "Bahia");
-
-foreach (var item in estados) {//foreach(KeyValuePair<string,string> item  in estados){
-
-    Console.WriteLine($"Chave:  {item.Key},  valor: {item.Value}");
-
-}
 
 
+// foreach (var item in estados) {//foreach(KeyValuePair<string,string> item  in estados){
+
+//     Console.WriteLine($"Chave:  {item.Key},  valor: {item.Value}");
+
+// }
 
 
+// estados.Remove("BA");// Removendo
+
+// Console.WriteLine("----------------------------------");
+
+// foreach (var item in estados) {//foreach(KeyValuePair<string,string> item  in estados){
+
+//     Console.WriteLine($"Chave:  {item.Key},  valor: {item.Value}");
+
+// }
+
+// Console.WriteLine("----------------------------------");
+
+// estados["SP"] = "São Paulo  - valor alterado"; // alterando valores
+
+// foreach (var item in estados) {//foreach(KeyValuePair<string,string> item  in estados){
+
+//     Console.WriteLine($"Chave:  {item.Key},  valor: {item.Value}");
+
+// }
+
+// Console.WriteLine("----------------------------------");
+
+// string chave = "BA";
+
+// Console.WriteLine($"Verificando o elemento:  {chave}");
+
+// if(estados.ContainsKey("BA2")){
+
+//       Console.WriteLine($"Valor existente: {chave}");
+
+// }
+// else{
+
+//       Console.WriteLine($"Valor não existe. É seguro adicionar a chave:  {chave}");
+
+// }
+
+Console.WriteLine("----------------------------------");
 
 
+Console.WriteLine($"Obtendo valor de uma chave");
 
-
-
-
-
-
+Console.WriteLine(estados["MG"]);
 
 
 
