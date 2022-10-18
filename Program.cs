@@ -1,29 +1,13 @@
-﻿Stack<int> pilha = new Stack<int>(); // pilha
+﻿Dictionary<string, string> estados = new Dictionary<string, string>(); // implementação da estrutura dictionary
 
-pilha.Push(4);
+estados.Add("SP", "São Paulo");
+estados.Add("BA", "Bahia");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BA2", "Bahia");
 
-pilha.Push(6);
+foreach (var item in estados) {//foreach(KeyValuePair<string,string> item  in estados){
 
-pilha.Push(8);
-
-pilha.Push(10);
-
-
-
-foreach (int item in pilha){
-
-    Console.WriteLine(item);
-
-}
-
-
-Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}");
-
-pilha.Push(20);
-
-foreach (int item in pilha){
-
-    Console.WriteLine(item);
+    Console.WriteLine($"Chave:  {item.Key},  valor: {item.Value}");
 
 }
 
@@ -43,531 +27,576 @@ foreach (int item in pilha){
 
 
 
-// // using Excecoes_Colecoes.Models;
+// Stack<int> pilha = new Stack<int>(); // pilha
 
-// // new ExemploExcecao().Metodo1();
+// pilha.Push(4);
 
+// pilha.Push(6);
 
-// // // // using System.IO;
+// pilha.Push(8);
 
+// pilha.Push(10);
 
-// // // // //string[] linhasExemplo = File.ReadAllLines("Arquivos/arquivo_Leitura.txt");
-// // // // //Console.WriteLine("Chegou até aqui");
 
-// // // // try{
 
+// foreach (int item in pilha){
 
-
-// // // //                 string[] linhas = File.ReadAllLines("Arquivos/darquivoLeitura.txt");
-// // // //                 foreach (string linha in linhas){
-
-// // // //                     Console.WriteLine(linha);
-
-// // // //                 }
-
-// // // // }catch(FileNotFoundException ex){
-
-// // // //     Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado.  {ex.Message}");
-
-
-// // // // }catch(DirectoryNotFoundException ex){
-
-// // // //       Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho da pasta  não encontrado.  {ex.Message}");
-
-
-
-// // // // }catch(Exception ex){
-
-// // // //       Console.WriteLine($"Ocorreu uma exceção genérica.  {ex.Message}");
-
-
-// // // // }finally{
-
-// // // //         Console.WriteLine("Chegou até aqui");
-
-
-// // // // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // using ExemploFundamentos.Models;
-// // // // //using OperadoresAritmeticosCSharp.Models;
-
-
-
-// // // // // Calculadora  calc = new Calculadora();
-
-
-// // // // // calc.Somar(10,30);
-// // // // // calc.Subtrair(10,50);
-// // // // // calc.Multiplicar(15,45);
-// // // // // calc.Dividir(2,2);
-// // // // //calc.Potencia(3,3);
-// // // // // calc.Seno(30);
-// // // // // calc.Cosseno(30);
-// // // // // calc.Tangente(30);
-
-// // // // // int numeroIncremento = 10;
-// // // // // Console.WriteLine(numeroIncremento);
-// // // // // Console.WriteLine("Incrementando o 10");
-// // // // // // numero = numero + 1;
-// // // // // numeroIncremento++;
-// // // // // Console.WriteLine(numeroIncremento);
-
-// // // // // int numeroDecremento = 20;
-// // // // // Console.WriteLine("Decrementando o 20");
-// // // // // // numero = numero + 1;
-// // // // // numeroDecremento--;
-// // // // // Console.WriteLine(numeroDecremento);
-
-// // // // //calc.RaizQuadrada(9);
-
-
-
-// // // // // using HerancaPolimorfismo.Models;
-
-// // // // // Aluno aluno = new Aluno();
-
-// // // // // aluno.Nome = "Leonardo";
-
-// // // // // aluno.Email = "testou.com";
-
-// // // // // aluno.Idade = 20;
-
-// // // // // aluno.Nota = 10;
-
-// // // // // aluno.Apresentar();
-
-
-
-// // // // // Professor p1 = new Professor();
-
-// // // // // p1.Nome ="Eduardo";
-// // // // // p1.Idade = 50;
-// // // // // p1.Salario = 1000;
-// // // // // p1.Apresentar();
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // bool choveu = false;
-// // // // // bool estaTarde = true;
-
-// // // // // if(!choveu && ! estaTarde){
-
-// // // // //       Console.WriteLine("Vou pedalar");
-
-// // // // // }
-// // // // // else{
-
-// // // // //       Console.WriteLine("Vou  pedalar um outro dia.");
-
-// // // // // }
-
-
-
-
-
-
-
-
-
-
-// // // // // bool possuiPresencaMinima = true;
-
-// // // // // double media =5.5;
-
-// // // // // if(possuiPresencaMinima && media >= 7){
-
-// // // // //       Console.WriteLine("Aprovado");
-
-
-// // // // // }else{
-
-// // // // //       Console.WriteLine("Reprovado");
-
-// // // // // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // bool ehMaiorDeIdade = false;
-// // // // // bool possuiAutorizacaoDoUsuario = false;
-
-// // // // // if(ehMaiorDeIdade || possuiAutorizacaoDoUsuario){
-
-// // // // //       Console.WriteLine("Entrada liberada");
-
-// // // // // }
-// // // // // else{
-
-// // // // //       Console.WriteLine("Entrada não liberada");
-
-// // // // // }
-
-
-
-
-
-
-
-
-
-
-
-// // // // // Console.WriteLine("Digite uma letra:  ");
-// // // // // string letra = Console.ReadLine();
-
-// // // // // switch (letra)
-// // // // // {
-// // // // //       case "a":
-// // // // //       case "e":
-// // // // //       case "i":
-// // // // //       case "o":
-// // // // //       case "u":
-// // // // //             Console.WriteLine("Vogal");
-// // // // //             break;
-
-// // // // //       default:
-// // // // //             Console.WriteLine("Não é uma vogal");
-// // // // //             break;
-
-// // // // // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // if(letra == "a" || letra == "e"
-// // // // //    letra == "i" || letra == "o" 
-// // // // //    || letra == "u") {
-
-// // // // //       Console.WriteLine("Vogal");
-
-// // // // // }
-// // // // // else{
-
-// // // // //       Console.WriteLine("Não é uma vogal");
-
-// // // // // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // if(letra == "a"){
-
-// // // // //        Console.Writeline("vogal");
-
-// // // // // }else if(letra == "e"){
-
-// // // // //        Console.Writeline("vogal");
-
-// // // // // }else if(letra == "i"){
-
-// // // // //        Console.Writeline("vogal");
-
-// // // // // }else if(letra == "o){
-
-// // // // //        Console.Writeline("vogal");
-
-// // // // // } else if(letra == "u"){
-
-// // // // //       Console.Writeline("vogal");
-
-// // // // // }else{
-
-// // // // //       Console.Writeline("Não é umavogal");
-
-// // // // // }
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // int quantidadeEmEstoque = 3;
-
-// // // // // int quantidadeCompra = 0;
-
-// // // // // bool possivelVenda = quantidadeCompra > 0  && quantidadeEmEstoque >= quantidadeCompra;
-
-// // // // // Console.WriteLine($"Quantidade em estoque:  {quantidadeEmEstoque} ");
-// // // // // Console.WriteLine($"Quantidade compra:  {quantidadeCompra} ");
-// // // // // Console.WriteLine($"É possível realizar a venda?  {possivelVenda}");
-
-
-// // // // // if(quantidadeCompra == 0){
-
-// // // // //       Console.WriteLine("Venda inválida");
-
-// // // // // }
-// // // // // else if(possivelVenda)
-// // // // // {
-
-// // // // //       Console.WriteLine("Venda realizada.");
-
-
-// // // // // }
-// // // // // else
-// // // // // {
-
-// // // // //       Console.WriteLine("Desculpe não temos a quantidade desejada em estoque");
-
-// // // // // }
-
-
-
-
-
-
-
-
-// // // // // string a = "15-";
-
-// // // // // //int b =0;
-
-// // // // // int.TryParse(a, out int b);
-
-// // // // // Console.WriteLine(b);
-
-// // // // // Console.WriteLine("Conversão realizada com sucesso");
-
-
-// // // // // double a = 4/ (2 + 2);
-
-// // // // // Console.WriteLine(a);
-
-
-// // // // // int a = 5;
-
-// // // // // double b = a;
-
-// // // // // long a = long.MaxValue;
-
-// // // // // long b = Convert.ToInt32(a);
-
-// // // // // int a = int.MaxValue;
-
-// // // // // long b = a;
-
-// // // // // Console.WriteLine(b);
-
-
-// // // // // int a =  10;
-
-// // // // // int  b = 20;
-
-// // // // // int c = a + b;
-
-// // // // //c = c +  5; // 30 + 5
-
-// // // // //c += 5;  // c = c + 5
-
-// // // // //c -= 5; // c = c -- 5
-
-// // // // //c *= 5;
-
-
-
-// // // // //Console.WriteLine(c);
-
-// // // // //Cast  -  Casting
-// // // // //int a = Convert.ToInt32(null); // Retorna 0 ao passar o valor nulo como parâmetro. Preferíel de utilizar. Cenário  de valor nulo é comum.
-
-// // // // //int a = int.Parse(null); // Não aceita nulo
-
-// // // // // int inteiro = 5;
-// // // // // string a =   inteiro.ToString();
-
-// // // // // Console.WriteLine(a);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // DateTime dataAtual = DateTime.Now.AddDays(5);
-
-// // // // // Console.WriteLine(dataAtual.ToString("dd/MM/yyyy HH:mm"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // // // string apresentacao = "Olá, seja bem vindo";
-
-// // // // // int quantidade = 1;
-
-// // // // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
-
-// // // // // quantidade = 10;
-
-// // // // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
-
-// // // // // double altura = 1.80;
-
-// // // // // decimal preco =1.80M;
-
-// // // // // bool condicao = true;
-
-// // // // // Console.WriteLine("Valor da variável apresentacao: " + apresentacao);
-
-// // // // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
-
-// // // // // Console.WriteLine("Valor da variável altura: " + altura.ToString("0.00"));
-
-// // // // // Console.WriteLine("Valor da variável preco: " + preco);
-
-// // // // // Console.WriteLine("Valor da variável condicao: " + condicao);
-
-
-
-// // // // /*Pessoa pessoa1 = new Pessoa();
-// // // // pessoa1.Nome = "Buta";
-// // // // pessoa1.Idade = 26;
-// // // // pessoa1.Apresentar();
-
-// // // // Pessoa pessoaFisicaRepresentacao = new Pessoa();*/
-
-
-
-
-// Queue<int> fila = new Queue<int>();
-
-// //Adicionando um elemento numa fila.
-
-// fila.Enqueue(2);
-
-// fila.Enqueue(4);
-
-// fila.Enqueue(6);
-
-// fila.Enqueue(8);
-
-
-// foreach (int item in fila){
-
-//   Console.WriteLine(item);
+//     Console.WriteLine(item);
 
 // }
 
-// // Removendo um elemento duma fila
 
-// Console.WriteLine($"Removendo o elemento: {fila.Dequeue()}");
+// Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}");
 
-// fila.Enqueue(10);
+// pilha.Push(20);
 
-// foreach (int item in fila){
+// foreach (int item in pilha){
 
-//   Console.WriteLine(item);
+//     Console.WriteLine(item);
 
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // using Excecoes_Colecoes.Models;
+
+// // // new ExemploExcecao().Metodo1();
+
+
+// // // // // using System.IO;
+
+
+// // // // // //string[] linhasExemplo = File.ReadAllLines("Arquivos/arquivo_Leitura.txt");
+// // // // // //Console.WriteLine("Chegou até aqui");
+
+// // // // // try{
+
+
+
+// // // // //                 string[] linhas = File.ReadAllLines("Arquivos/darquivoLeitura.txt");
+// // // // //                 foreach (string linha in linhas){
+
+// // // // //                     Console.WriteLine(linha);
+
+// // // // //                 }
+
+// // // // // }catch(FileNotFoundException ex){
+
+// // // // //     Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado.  {ex.Message}");
+
+
+// // // // // }catch(DirectoryNotFoundException ex){
+
+// // // // //       Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho da pasta  não encontrado.  {ex.Message}");
+
+
+
+// // // // // }catch(Exception ex){
+
+// // // // //       Console.WriteLine($"Ocorreu uma exceção genérica.  {ex.Message}");
+
+
+// // // // // }finally{
+
+// // // // //         Console.WriteLine("Chegou até aqui");
+
+
+// // // // // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // using ExemploFundamentos.Models;
+// // // // // //using OperadoresAritmeticosCSharp.Models;
+
+
+
+// // // // // // Calculadora  calc = new Calculadora();
+
+
+// // // // // // calc.Somar(10,30);
+// // // // // // calc.Subtrair(10,50);
+// // // // // // calc.Multiplicar(15,45);
+// // // // // // calc.Dividir(2,2);
+// // // // // //calc.Potencia(3,3);
+// // // // // // calc.Seno(30);
+// // // // // // calc.Cosseno(30);
+// // // // // // calc.Tangente(30);
+
+// // // // // // int numeroIncremento = 10;
+// // // // // // Console.WriteLine(numeroIncremento);
+// // // // // // Console.WriteLine("Incrementando o 10");
+// // // // // // // numero = numero + 1;
+// // // // // // numeroIncremento++;
+// // // // // // Console.WriteLine(numeroIncremento);
+
+// // // // // // int numeroDecremento = 20;
+// // // // // // Console.WriteLine("Decrementando o 20");
+// // // // // // // numero = numero + 1;
+// // // // // // numeroDecremento--;
+// // // // // // Console.WriteLine(numeroDecremento);
+
+// // // // // //calc.RaizQuadrada(9);
+
+
+
+// // // // // // using HerancaPolimorfismo.Models;
+
+// // // // // // Aluno aluno = new Aluno();
+
+// // // // // // aluno.Nome = "Leonardo";
+
+// // // // // // aluno.Email = "testou.com";
+
+// // // // // // aluno.Idade = 20;
+
+// // // // // // aluno.Nota = 10;
+
+// // // // // // aluno.Apresentar();
+
+
+
+// // // // // // Professor p1 = new Professor();
+
+// // // // // // p1.Nome ="Eduardo";
+// // // // // // p1.Idade = 50;
+// // // // // // p1.Salario = 1000;
+// // // // // // p1.Apresentar();
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // bool choveu = false;
+// // // // // // bool estaTarde = true;
+
+// // // // // // if(!choveu && ! estaTarde){
+
+// // // // // //       Console.WriteLine("Vou pedalar");
+
+// // // // // // }
+// // // // // // else{
+
+// // // // // //       Console.WriteLine("Vou  pedalar um outro dia.");
+
+// // // // // // }
+
+
+
+
+
+
+
+
+
+
+// // // // // // bool possuiPresencaMinima = true;
+
+// // // // // // double media =5.5;
+
+// // // // // // if(possuiPresencaMinima && media >= 7){
+
+// // // // // //       Console.WriteLine("Aprovado");
+
+
+// // // // // // }else{
+
+// // // // // //       Console.WriteLine("Reprovado");
+
+// // // // // // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // bool ehMaiorDeIdade = false;
+// // // // // // bool possuiAutorizacaoDoUsuario = false;
+
+// // // // // // if(ehMaiorDeIdade || possuiAutorizacaoDoUsuario){
+
+// // // // // //       Console.WriteLine("Entrada liberada");
+
+// // // // // // }
+// // // // // // else{
+
+// // // // // //       Console.WriteLine("Entrada não liberada");
+
+// // // // // // }
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // Console.WriteLine("Digite uma letra:  ");
+// // // // // // string letra = Console.ReadLine();
+
+// // // // // // switch (letra)
+// // // // // // {
+// // // // // //       case "a":
+// // // // // //       case "e":
+// // // // // //       case "i":
+// // // // // //       case "o":
+// // // // // //       case "u":
+// // // // // //             Console.WriteLine("Vogal");
+// // // // // //             break;
+
+// // // // // //       default:
+// // // // // //             Console.WriteLine("Não é uma vogal");
+// // // // // //             break;
+
+// // // // // // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // if(letra == "a" || letra == "e"
+// // // // // //    letra == "i" || letra == "o" 
+// // // // // //    || letra == "u") {
+
+// // // // // //       Console.WriteLine("Vogal");
+
+// // // // // // }
+// // // // // // else{
+
+// // // // // //       Console.WriteLine("Não é uma vogal");
+
+// // // // // // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // if(letra == "a"){
+
+// // // // // //        Console.Writeline("vogal");
+
+// // // // // // }else if(letra == "e"){
+
+// // // // // //        Console.Writeline("vogal");
+
+// // // // // // }else if(letra == "i"){
+
+// // // // // //        Console.Writeline("vogal");
+
+// // // // // // }else if(letra == "o){
+
+// // // // // //        Console.Writeline("vogal");
+
+// // // // // // } else if(letra == "u"){
+
+// // // // // //       Console.Writeline("vogal");
+
+// // // // // // }else{
+
+// // // // // //       Console.Writeline("Não é umavogal");
+
+// // // // // // }
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // int quantidadeEmEstoque = 3;
+
+// // // // // // int quantidadeCompra = 0;
+
+// // // // // // bool possivelVenda = quantidadeCompra > 0  && quantidadeEmEstoque >= quantidadeCompra;
+
+// // // // // // Console.WriteLine($"Quantidade em estoque:  {quantidadeEmEstoque} ");
+// // // // // // Console.WriteLine($"Quantidade compra:  {quantidadeCompra} ");
+// // // // // // Console.WriteLine($"É possível realizar a venda?  {possivelVenda}");
+
+
+// // // // // // if(quantidadeCompra == 0){
+
+// // // // // //       Console.WriteLine("Venda inválida");
+
+// // // // // // }
+// // // // // // else if(possivelVenda)
+// // // // // // {
+
+// // // // // //       Console.WriteLine("Venda realizada.");
+
+
+// // // // // // }
+// // // // // // else
+// // // // // // {
+
+// // // // // //       Console.WriteLine("Desculpe não temos a quantidade desejada em estoque");
+
+// // // // // // }
+
+
+
+
+
+
+
+
+// // // // // // string a = "15-";
+
+// // // // // // //int b =0;
+
+// // // // // // int.TryParse(a, out int b);
+
+// // // // // // Console.WriteLine(b);
+
+// // // // // // Console.WriteLine("Conversão realizada com sucesso");
+
+
+// // // // // // double a = 4/ (2 + 2);
+
+// // // // // // Console.WriteLine(a);
+
+
+// // // // // // int a = 5;
+
+// // // // // // double b = a;
+
+// // // // // // long a = long.MaxValue;
+
+// // // // // // long b = Convert.ToInt32(a);
+
+// // // // // // int a = int.MaxValue;
+
+// // // // // // long b = a;
+
+// // // // // // Console.WriteLine(b);
+
+
+// // // // // // int a =  10;
+
+// // // // // // int  b = 20;
+
+// // // // // // int c = a + b;
+
+// // // // // //c = c +  5; // 30 + 5
+
+// // // // // //c += 5;  // c = c + 5
+
+// // // // // //c -= 5; // c = c -- 5
+
+// // // // // //c *= 5;
+
+
+
+// // // // // //Console.WriteLine(c);
+
+// // // // // //Cast  -  Casting
+// // // // // //int a = Convert.ToInt32(null); // Retorna 0 ao passar o valor nulo como parâmetro. Preferíel de utilizar. Cenário  de valor nulo é comum.
+
+// // // // // //int a = int.Parse(null); // Não aceita nulo
+
+// // // // // // int inteiro = 5;
+// // // // // // string a =   inteiro.ToString();
+
+// // // // // // Console.WriteLine(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // DateTime dataAtual = DateTime.Now.AddDays(5);
+
+// // // // // // Console.WriteLine(dataAtual.ToString("dd/MM/yyyy HH:mm"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // // // // string apresentacao = "Olá, seja bem vindo";
+
+// // // // // // int quantidade = 1;
+
+// // // // // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
+
+// // // // // // quantidade = 10;
+
+// // // // // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
+
+// // // // // // double altura = 1.80;
+
+// // // // // // decimal preco =1.80M;
+
+// // // // // // bool condicao = true;
+
+// // // // // // Console.WriteLine("Valor da variável apresentacao: " + apresentacao);
+
+// // // // // // Console.WriteLine("Valor da variável quantidade: " + quantidade);
+
+// // // // // // Console.WriteLine("Valor da variável altura: " + altura.ToString("0.00"));
+
+// // // // // // Console.WriteLine("Valor da variável preco: " + preco);
+
+// // // // // // Console.WriteLine("Valor da variável condicao: " + condicao);
+
+
+
+// // // // // /*Pessoa pessoa1 = new Pessoa();
+// // // // // pessoa1.Nome = "Buta";
+// // // // // pessoa1.Idade = 26;
+// // // // // pessoa1.Apresentar();
+
+// // // // // Pessoa pessoaFisicaRepresentacao = new Pessoa();*/
+
+
+
+
+// // Queue<int> fila = new Queue<int>();
+
+// // //Adicionando um elemento numa fila.
+
+// // fila.Enqueue(2);
+
+// // fila.Enqueue(4);
+
+// // fila.Enqueue(6);
+
+// // fila.Enqueue(8);
+
+
+// // foreach (int item in fila){
+
+// //   Console.WriteLine(item);
+
+// // }
+
+// // // Removendo um elemento duma fila
+
+// // Console.WriteLine($"Removendo o elemento: {fila.Dequeue()}");
+
+// // fila.Enqueue(10);
+
+// // foreach (int item in fila){
+
+// //   Console.WriteLine(item);
+
+// // }
 
 
